@@ -8,6 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Data
@@ -17,6 +18,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "games")
 public class BoardcampGameModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Getter
     @Id
     private Long id;
 
@@ -31,4 +33,11 @@ public class BoardcampGameModel {
 
     @Column(nullable = false)
     private Long pricePerDay;
+
+    public BoardcampGameModel(String name, String image, Integer stockTotal, Long pricePerDay) {
+        this.name = name;
+        this.image = image;
+        this.stockTotal = stockTotal;
+        this.pricePerDay = pricePerDay;
+    }
 }
