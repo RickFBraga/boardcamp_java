@@ -1,6 +1,5 @@
 package com.api.boardcamp.services;
 
-import com.api.boardcamp.dtos.BoardcampCustomersDto;
 import com.api.boardcamp.dtos.BoardcampRentalDTO;
 import com.api.boardcamp.models.BoardcampCustomerModel;
 import com.api.boardcamp.models.BoardcampGameModel;
